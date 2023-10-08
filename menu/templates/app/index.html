@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load tree %}
+
+{% if menus %}
+<ul>
+	{% for menu in menus %}
+		<li><a href='{{ menu }}'>{{ menu }}</li>
+	{% endfor %}
+</ul>    
+	{% elif name %}
+		<h3><a href="{% url 'main' %}">Назад</h3>
+		{% draw_menu name item %}
+	{% endif %}
+
+{% endblock %}

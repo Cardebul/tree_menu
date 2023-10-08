@@ -1,0 +1,10 @@
+<ul>
+  {% for item in menu %}
+
+    {% if item.name %}
+      <li><a href='{{ item.name }}'>{{ item }}</li> 
+    {% else %}
+      {% include 'app/menu.html' with menu=item %}  <!--Если попался queryset то вызываем отображение для него рекурсивно-->
+    {% endif %}
+  {% endfor %}
+</ul
