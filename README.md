@@ -38,7 +38,7 @@ source env/Scripts/activate
 перейти
 
 ```
-cd tree_menu
+cd menu
 ```
 
 выполнить миграции
@@ -52,5 +52,5 @@ python3 script.py
 
 запустить проект
 ```
-python3 script.py
+python3 manage.py runserver
 ```
